@@ -45,7 +45,7 @@ class Cinema {
         if (!$result) {
             die("Erro na consulta: " . $this->db->error);
         }
-    
+
         // Verificar se há resultados antes de tentar processar
         if ($result->num_rows > 0) {
             $cinemas = array();

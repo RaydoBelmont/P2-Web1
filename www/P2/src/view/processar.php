@@ -1,22 +1,18 @@
 <?php
-// processar.php
-
-// Incluir o autoloader do Composer para carregar automaticamente as classes
 require '../../vendor/autoload.php';
 
-// Inicializar o controlador e o modelo
 use App\Controller\CinemaController;
 use App\Model\Cinema;
 
-$cinemaModel = new Cinema(/* configurações do banco de dados, se necessário */);
+$cinemaModel = new Cinema();
 $cinemaController = new CinemaController($cinemaModel);
 
 // Verificar qual ação está sendo realizada
 if (isset($_POST['inserir'])) {
-    if ($_POST['id'] > 0){
+    if ($_POST['id'] > 0){ //se existir um ID e pq esta editando
     // Ação de edição
     $cinemaController->atualizarCinema($_POST['id'], $_POST['nome'], $_POST['endereco'], $_POST['capacidade'], $_POST['qtdSalas']);
-    } else{
+    } else{ //se nao vai para inserção
     // Ação de inserção
     $cinemaController->inserirCinema($_POST['nome'], $_POST['endereco'], $_POST['capacidade'], $_POST['qtdSalas']);
     }
@@ -25,7 +21,6 @@ if (isset($_POST['inserir'])) {
     $cinemaController->excluirCinema($_POST['id']);
 }
 
-// Redirecionar de volta para a página principal
 header('Location: principal.php');
 exit;
 ?>

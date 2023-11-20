@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "e188ebc0-b441-4582-86be-c37219b390b5",
+		"name": "Employees",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30608447"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"birth_date\": \"1964-06-02\",\r\n    \"first_name\": \"Bezalel\",\r\n    \"last_name\": \"Simmel\",\r\n    \"gender\": \"F\",\r\n    \"hire_date\": \"1985-11-21\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/20231018/api.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"20231018",
+						"api.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/20231018/api.php?id=10002",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"20231018",
+						"api.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "10002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/20231018/api.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"20231018",
+						"api.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

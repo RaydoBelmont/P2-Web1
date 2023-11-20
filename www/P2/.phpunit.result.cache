@@ -1,0 +1,1 @@
+{"version":1,"defects":[],"times":{"CinemaTest::testInserirCinema":0.385,"CinemaTest::testExcluirCinema":0.106,"CinemaTest::testAtualizarCinema":0.005,"CinemaTest::testListarCinemas":0.004,"CinemaTest::testInserirController":0.003,"CinemaTest::testExcluirController":0.005,"CinemaTest::testAtualizarController":0.007,"CinemaTest::testListarController":0.004}}

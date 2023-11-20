@@ -1,0 +1,20 @@
+{
+    "name": "root/p2",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "require": {
+        "monolog/monolog": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
